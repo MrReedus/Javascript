@@ -19,3 +19,6 @@ const myStr = '<a href="http://www.example.com" target="_blank">Link</a>'; // д
 \f	подача формы
 */
 
+// Конкатенация +
+
+const ourStr = "I come first. " + "I come second."; // => I come first. I come second 
