@@ -22,3 +22,17 @@ const myStr = '<a href="http://www.example.com" target="_blank">Link</a>'; // д
 // Конкатенация +
 
 const ourStr = "I come first. " + "I come second."; // => I come first. I come second 
+
+// также в конкатенации можно использовать оператор +=
+
+let ourStr = "I come first. ";
+ourStr += "I come second."; // => I come first. I come second 
+
+// Также можно вставлять переменные в строку с помощью +
+
+const ourName = "freeCodeCamp";
+const ourStr = "Hello, our name is " + ourName + ", how are you?";
+
+const anAdjective = "awesome!";
+let ourStr = "freeCodeCamp is ";
+ourStr += anAdjective; // или вот так, ourStrбудет иметь значение freeCodeCamp is awesome!.
