@@ -157,6 +157,19 @@ const ourArray = ["Stimpson", "J", "cat"];
 ourArray.shift();
 ourArray.unshift("Happy");
 
+//? После shift, ourArrayбудет иметь значение ["J", "cat"]. После unshift, ourArrayбудет иметь значение ["Happy", "J", "cat"].
+
+//! создадим массив в переменной myList со спискjv продуктов и с номерами им соответсвующими (рандомно)
+
+const myList = [
+    ["banana", 5],
+    ["coffe", 12],
+    ["cola", 55],
+    ["cheese", 76],
+    ["milk", 6]
+];
+
+
 
 
 
