@@ -149,6 +149,14 @@ const removedFromOurArray = ourArray.shift();
 //? emovedFromOurArrayбудет иметь значение строки Stimpson, и ourArrayбудет иметь ["J", ["cat"]].
 
 
+//! unshift()работает точно так же .push(), но вместо добавления элемента в конец массива unshift()добавляет элемент в начало массива.
+
+//Пример:
+
+const ourArray = ["Stimpson", "J", "cat"];
+ourArray.shift();
+ourArray.unshift("Happy");
+
 
 
 
