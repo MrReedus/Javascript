@@ -195,6 +195,14 @@ function testFun(param1, param2) {
     console.log(param1, param2);
 }
 
+//? Функция должна что-то возвращать, чтобы вернуть значение из функции нужно использовать оператор return. Пример ниже.
+
+function plusThree(num) {
+    return num + 3;
+}
+
+const answer = plusThree(5); // answer = 8; т.к в аргумент мы передали число 5 (5 + 3 = 8 )
+
 
 
 
