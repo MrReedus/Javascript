@@ -573,6 +573,8 @@ function sequentialSizes(val) {
 
 sequentialSizes(1);
 
+// Replacing If Else Chains with Switch
+
 function chainToSwitch(val) {
     let answer = "";
 
@@ -593,6 +595,16 @@ function chainToSwitch(val) {
             answer = "Ate Nine";
             break;
     }
+}
+
+// Returning Boolean Values from Functions | возвращаем результат сравнения аргументов функции, вернётся true или false
+
+function isLess(a, b) {
+
+    return a < b;
+}
+
+isLess(10, 15);
 
 
 
