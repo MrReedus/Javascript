@@ -606,6 +606,48 @@ function isLess(a, b) {
 
 isLess(10, 15);
 
+// Return Early Pattern for Functions 
+
+function abTest(a, b) {
+    if (a < 0 || b < 0) {
+        return undefined;
+    } // Если условие выполнится, вёрнятся undefined и функция остановится и никогда не дойдет до нижних вычислений.
+
+    return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+}
+
+abTest(2, 2);
+
+// можно упростить стрелочной функцией
+const abTest = (a, b) => (a < 0 || b < 0) ? undefined : Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2));
+
+abTest(2, 2);
+
+// Counting Cards
+
+let count = 0;
+
+function cc(card) {
+
+    if (card >= 2 && card <= 6) {
+        count++;
+    } else if (card !== 10 && card >= 7 && card <= 9) {
+        count = count;
+    } else if (card === 10 || card === 'J' || card === 'Q' || card === 'K' || card === 'A') {
+        count--;
+    }
+    if (count > 0) {
+        return count + " Bet"
+    } else {
+        return count + " Hold"
+    }
+
+
+
+}
+
+
+
 
 
 
