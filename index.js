@@ -473,6 +473,8 @@ function testSize(num) {
 
 testSize(7);
 
+
+
 const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
 
 function golfScore(par, strokes) {
@@ -497,6 +499,29 @@ function golfScore(par, strokes) {
 }
 
 golfScore(5, 4);
+
+// switch case
+function caseInSwitch(val) {
+    let answer = "";
+    switch (val) {
+        case 1:
+            answer = "alpha";
+            break;
+        case 2:
+            answer = "beta";
+            break;
+        case 3:
+            answer = "gamma";
+            break;
+        case 4:
+            answer = "delta";
+            break;
+    }
+
+    return answer;
+}
+
+caseInSwitch(1);
 
 
 
