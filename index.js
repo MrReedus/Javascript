@@ -623,7 +623,7 @@ const abTest = (a, b) => (a < 0 || b < 0) ? undefined : Math.round(Math.pow(Math
 
 abTest(2, 2);
 
-// Counting Cards
+// Counting Cards | вариант решения через if alse
 
 let count = 0;
 
@@ -632,7 +632,7 @@ function cc(card) {
     if (card >= 2 && card <= 6) {
         count++;
     } else if (card !== 10 && card >= 7 && card <= 9) {
-        count = count;
+        count;
     } else if (card === 10 || card === 'J' || card === 'Q' || card === 'K' || card === 'A') {
         count--;
     }
@@ -642,9 +642,42 @@ function cc(card) {
         return count + " Hold"
     }
 
-
-
 }
+
+// counting Cards | Альтернативный вариант через SWITCH CASE
+
+let count = 0;
+
+function cc(card) {
+    switch (card) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            count++;
+            break;
+        case 7:
+        case 8:
+        case 9:
+            count;
+            break;
+        case 7:
+        case 10:
+        case 'J':
+        case 'Q':
+        case 'K':
+        case 'A':
+            count--;
+            break;
+    }
+    if (count > 0) {
+        return count + " Bet"
+    } else {
+        return count + " Hold"
+    }
+}
+
 
 
 
