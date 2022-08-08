@@ -494,13 +494,12 @@ function golfScore(par, strokes) {
     } else if (strokes >= par + 3) {
         return names[6];
     }
-
-
 }
 
 golfScore(5, 4);
 
 // switch case
+
 function caseInSwitch(val) {
     let answer = "";
     switch (val) {
@@ -523,7 +522,7 @@ function caseInSwitch(val) {
 
 caseInSwitch(1);
 
-// defaul option switch case
+// default option switch case
 
 function switchOfStuff(val) {
     let answer = "";
@@ -540,14 +539,37 @@ function switchOfStuff(val) {
         default:
             answer = "stuff";
             break;
-
-
     }
 
     return answer;
 }
 
 switchOfStuff(1);
+// Multiple Identical Options in Switch Statements
+function sequentialSizes(val) {
+    let answer = "";
+
+    switch (val) {
+        case 1:
+        case 2:
+        case 3:
+            answer = "Low";
+            break;
+        case 4:
+        case 5:
+        case 6:
+            answer = "Mid";
+            break;
+        case 7:
+        case 8:
+        case 9:
+            answer = "High";
+            break;
+    }
+    return answer;
+}
+
+sequentialSizes(1);
 
 
 
