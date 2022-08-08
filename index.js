@@ -410,3 +410,37 @@ if (num > 15) {
 } else {
     return "Between 5 and 15";
 }
+
+//! Порядок важен в if, else if заявлениях.
+
+/*Функция выполняется сверху вниз, поэтому вам нужно быть осторожным с тем, какой оператор идет первым.
+
+Возьмите эти две функции в качестве примера.
+
+Вот первое:*/
+
+function foo(x) {
+    if (x < 1) {
+        return "Less than one";
+    } else if (x < 2) {
+        return "Less than two";
+    } else {
+        return "Greater than or equal to two";
+    }
+}
+// А второй просто меняет порядок операторов:
+
+function bar(x) {
+    if (x < 2) {
+        return "Less than two";
+    } else if (x < 1) {
+        return "Less than one";
+    } else {
+        return "Greater than or equal to two";
+    }
+}
+//?Хотя эти две функции выглядят почти одинаково, если мы передаем число обеим, мы получаем разные выходные данные.
+
+foo(0)
+bar(0)
+//foo(0) вернет строку Less than one и bar(0) вернет строку Less than two.
