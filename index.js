@@ -780,6 +780,24 @@ function phoneticLookup(val) {
     return result;
 }
 
+// Проверка объектов на свойства
+
+function checkObj(obj, checkProp) {
+    if (obj.hasOwnProperty(checkProp)) { //! hasOwnProperty проверяет содержится ли checkProp в obj
+        return obj[checkProp];
+    } else {
+        return "Not Found";
+    }
+}
+
+// можно упростить в одну строчку с помощью стрелочной функции
+
+const checkObj = (obj, checkProp) => obj.hasOwnProperty(checkProp) ? obj[checkProp] : "Not Found";
+
+
+
+
+
 
 
 
