@@ -915,6 +915,27 @@ for (let i = 1; i <= 5; i++) {
     myArray.push(i) // добавляет в пустой массив значения итерации цикла
 }
 
+// пушим в массив нечетные числа от 1 до 9
+const myArray = [];
+for (let i = 1; i < 10; i += 2) {
+    myArray.push(i)
+};
+
+// В обратном порядке 
+const myArray = [];
+for (let i = 9; i > 0; i -= 2) {
+    myArray.push(i);
+}
+
+//Перебор массива с помощью цикла for 
+
+const myArr = [2, 3, 4, 5, 6];
+let total = 0;
+for (let i = 0; i < myArr.length; i++) {
+    total += myArr[i];
+    console.log(total);
+}
+
 
 
 
