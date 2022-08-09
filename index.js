@@ -967,11 +967,11 @@ do {
 
 //! рекурсия
 
-// Пример рекурсии, функция вычисляющая факториал переданного числа, вызывает сама себя
+// Пример рекурсии, функция вычисляющая факториал переданного числа, вызывает сама себя.
 
 function fac(num) {
-    if (num < 0) return // улучшили функцию для отрицательных значения
-    if (num === 1) return num // ограничили функцию, т.е когда num станет равен 1 функция прекратит перемножение
+    if (num < 0) return // улучшили функцию для отрицательных значения.
+    if (num === 1) return num // ограничили функцию, т.е когда num станет равен 1 функция прекратит перемножение.
     return num * fac(num - 1) // к примеру передаём 5, 5 * fac(5-1) 5*4 = 20, далее вызывается 4,
     // результат предыдущий умножается на 3 т.к 4-1 = 3 , далее вызывается 3 и и умножается на 2, и так пока не дойдет до единицы где она и ограничивается.
 }
@@ -979,7 +979,8 @@ function fac(num) {
 
 console.log(fac(-5)) // 120
 
-//рекурсивная функция выполняет сложение первых n элементов массива
+// Эта рекурсивная функция выполняет сложение первых n элементов переданного массива.
+
 function sum(arr, n) {
 
     if (n <= 0) {
@@ -990,9 +991,49 @@ function sum(arr, n) {
 
 }
 
-//? можно упростить в одну строчку, но это плохо читаемо
+//? можно упростить в одну строчку, но это плохо читаемо.
 
 const sum = (arr, n) => (n <= 0) ? 0 : arr[n - 1] + sum(arr, n - 1);
+
+// Задача поиск профиля .
+const contacts = [
+    {
+        firstName: "Akira",
+        lastName: "Laine",
+        number: "0543236543",
+        likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+        firstName: "Harry",
+        lastName: "Potter",
+        number: "0994372684",
+        likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+        firstName: "Sherlock",
+        lastName: "Holmes",
+        number: "0487345643",
+        likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+        firstName: "Kristian",
+        lastName: "Vos",
+        number: "unknown",
+        likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+];
+
+function lookUpProfile(name, prop) {
+    for (let i = 0; i < contacts.length; i++) {
+        if (name === contacts[i].firstName) {
+            if (contacts[i].hasOwnProperty(prop)) {
+                return contacts[i][prop];
+            } else {
+                return 'No such property'
+            }
+        }
+    } return "No such contact";
+}
 
 
 
