@@ -936,8 +936,20 @@ for (let i = 0; i < myArr.length; i++) {
     console.log(total);
 }
 
+// Вложение циклов 
+function multiplyAll(arr) {
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) { // внутренний цикл позволяет перебрать вложенный массив и добраться до его элементов
+            console.log(arr[i][j]); // выведет в консоль все элементы массива
+            product *= arr[i][j]; // пермножение на каждый элемент массива
+        }
+    }
+    return product;
+}
+// Перебираем вложенный массив и на каждой итерации перемножаем его на элемент записываю результат в переменную product
 
-
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
 
 
 
