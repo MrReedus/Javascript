@@ -688,6 +688,7 @@ const myDog = {
 };
 
 // Accessing Object Properties with Dot Notation | доступ к свойствам объекта через точку
+
 const testObj = {
     "hat": "ballcap",
     "shirt": "jersey",
@@ -697,6 +698,18 @@ const testObj = {
 
 const hatValue = testObj.hat;
 const shirtValue = testObj.shirt;
+
+// Доступ к свойствам объекта с помощью нотации скобок
+
+const testObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+};
+
+
+const entreeValue = testObj['an entree'];
+const drinkValue = testObj['the drink'];
 
 
 
