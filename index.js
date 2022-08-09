@@ -1035,6 +1035,13 @@ function lookUpProfile(name, prop) {
     } return "No such contact";
 }
 
+// Возвращение случайного числа Math.random()
+
+function randomFraction(a) {
+    return Math.random(a);
+}
+
+
 
 
 
