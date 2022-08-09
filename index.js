@@ -678,6 +678,26 @@ function cc(card) {
     }
 }
 
+// Oblects 
+
+const myDog = {
+    name: "Gosha",
+    legs: 4,
+    tails: 1,
+    friends: ["human", "meat"]  nkkj bb
+};
+
+// Accessing Object Properties with Dot Notation | доступ к свойствам объекта через точку
+const testObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+};
+
+
+const hatValue = testObj.hat;
+const shirtValue = testObj.shirt;
+
 
 
 
