@@ -901,11 +901,20 @@ function updateRecords(records, id, prop, value) {
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
 // Цикл while
+
 const myArray = [5, 4, 3, 2, 1, 0];
 let i = 0;
 while (i < 5) {
     i++;
 }
+
+// Цикл for с массивом 
+
+const myArray = [];
+for (let i = 1; i <= 5; i++) {
+    myArray.push(i) // добавляет в пустой массив значения итерации цикла
+}
+
 
 
 
