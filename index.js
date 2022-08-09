@@ -724,6 +724,19 @@ const playerNumber = 16;  // = 16 в объекте
 const player = testObj[playerNumber];   // как итог получим доступ к значению  "Montana" под ключём 16
 
 
+// меняем свойства объекта
+
+const myDog = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.name = 'Happy Coder' // теперь name = Happy Coder
+
+
+
 
 
 
