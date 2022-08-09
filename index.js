@@ -736,6 +736,20 @@ const myDog = {
 myDog.name = 'Happy Coder' // теперь name = Happy Coder
 
 
+// Добавление новых свойств к объекту JavaScript
+
+const myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.bark = "bow-bow";
+  // или так myDog["bark"] = "bow-bow"  ж
+
+
+
 
 
 
