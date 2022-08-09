@@ -711,6 +711,18 @@ const testObj = {
 const entreeValue = testObj['an entree'];
 const drinkValue = testObj['the drink'];
 
+//  С помощью переменных
+
+const testObj = {
+    12: "Namath",
+    16: "Montana", // = playerNumber
+    19: "Unitas"
+};
+
+
+const playerNumber = 16;  // = 16 в объекте
+const player = testObj[playerNumber];   // как итог получим доступ к значению  "Montana" под ключём 16
+
 
 
 
