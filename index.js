@@ -794,6 +794,32 @@ function checkObj(obj, checkProp) {
 
 const checkObj = (obj, checkProp) => obj.hasOwnProperty(checkProp) ? obj[checkProp] : "Not Found";
 
+// Управление сложными объектами
+
+const myMusic = [
+    {
+        "artist": "Billy Joel",
+        "title": "Piano Man",
+        "release_year": 1973,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ],
+        "gold": true
+    },
+    {
+        "artist": "Jimmy Bakswell",
+        "title": "superstar",
+        "release_year": 2022,
+        "formats": [
+            "CD",
+            "8T",
+            "LP"
+        ]
+    }
+];
+
 
 
 
