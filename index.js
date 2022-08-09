@@ -746,7 +746,19 @@ const myDog = {
 };
 
 myDog.bark = "bow-bow";
-  // или так myDog["bark"] = "bow-bow"  ж
+// или так myDog["bark"] = "bow-bow"
+
+
+// удаление свойства объекта
+
+const myDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"],
+    "bark": "woof"
+};
+delete myDog.tails;
 
 
 
