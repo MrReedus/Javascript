@@ -1068,6 +1068,11 @@ const convertToInteger = str => parseInt(str)
 function convertToInteger(str) {
     return parseInt(str)
 }
+// преобразование числа из двоичной сисетемы чисел parseInt(string, radix);
+
+function convertToInteger(str) {
+    return parseInt(str, 2)
+}
 
 
 
