@@ -1048,6 +1048,17 @@ function randomWholeNum() {
     //Math.random()никогда не может быть полностью возвращено a 1 и, поскольку мы округляем в меньшую сторону, на самом деле невозможно получить 20. Этот метод даст нам целое число между 0и 19.
 }
 
+// Генерация случайных чисел в диапазоне 
+
+Math.floor(Math.random() * (max - min + 1)) + min
+
+function randomRange(myMin, myMax) {
+
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+
+}
+console.log(randomRange(1, 10)) // сгенерируется случайное число от 1 до 10
+
 
 
 
