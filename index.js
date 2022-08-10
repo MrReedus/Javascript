@@ -1074,6 +1074,20 @@ function convertToInteger(str) {
     return parseInt(str, 2)
 }
 
+// Услоный / Тернарный оператор ? :
+function checkEqual(a, b) {
+    return a === b ? 'Equal' : 'Not Equal'
+} // проверяем на равенство два числа
+
+//Несколько условных операторов 
+
+function checkSign(num) {
+    return (num > 0) ? 'positive'
+        : (num < 0) ? 'negative'
+            : 'zero'
+}
+
+
 
 
 
