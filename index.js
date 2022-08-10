@@ -1059,6 +1059,16 @@ function randomRange(myMin, myMax) {
 }
 console.log(randomRange(1, 10)) // сгенерируется случайное число от 1 до 10
 
+//! Функция parseInt() анализирует строку и возвращает целое число. Вот пример:
+
+const a = parseInt("007"); // 7
+
+const convertToInteger = str => parseInt(str)
+// или же 
+function convertToInteger(str) {
+    return parseInt(str)
+}
+
 
 
 
