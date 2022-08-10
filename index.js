@@ -1087,6 +1087,18 @@ function checkSign(num) {
             : 'zero'
 }
 
+// Рекурсия для создания обратного отсчета
+
+function countdown(n) {
+    if (n < 1) { // условие прекращения выполнения функции
+        return [];
+    } else {
+        const countArray = countdown(n - 1);
+        countArray.unshift(n); // добавляем элементы в начало массива
+        return countArray;
+    }
+}
+
 
 
 
