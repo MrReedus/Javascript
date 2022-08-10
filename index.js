@@ -1098,6 +1098,7 @@ function countdown(n) {
         return countArray;
     }
 }
+console.log(countdown(10)) // [10,9,8,7,6,5,4,3,2,1]
 
 // Рекурсия для диапазона чисел
 
@@ -1113,6 +1114,30 @@ function rangeOfNumbers(startNum, endNum) {
     }
 };
 console.log(rangeOfNumbers(1, 5)) // [ 1, 2, 3, 4, 5 ]
+
+
+
+//! Методы массивов
+
+//!Перебор: forEach
+
+//Метод arr.forEach позволяет запускать функцию для каждого элемента массива.
+
+//Его синтаксис:
+
+arr.forEach(function (item, index, array) {
+    // ... делать что-то с item
+});
+//Например, этот код выведет на экран каждый элемент массива:
+
+// Вызов alert для каждого элемента
+["Bilbo", "Gandalf", "Nazgul"].forEach(alert);
+//А этот вдобавок расскажет и о своей позиции в массиве:
+
+["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+    alert(`${item} имеет позицию ${index} в ${array}`);
+});
+//Результат функции (если она вообще что-то возвращает) отбрасывается и игнорируется.
 
 
 
