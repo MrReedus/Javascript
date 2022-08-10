@@ -991,7 +991,7 @@ function sum(arr, n) {
 
 }
 
-//? можно упростить в одну строчку, но это плохо читаемо.
+//? можно упростить в одну строчку, но это плохо читаемо (наверное).
 
 const sum = (arr, n) => (n <= 0) ? 0 : arr[n - 1] + sum(arr, n - 1);
 
@@ -1098,6 +1098,22 @@ function countdown(n) {
         return countArray;
     }
 }
+
+// Рекурсия для диапазона чисел
+
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum === endNum) {
+        return [startNum];
+    } else {
+        const numbers = rangeOfNumbers(startNum + 1, endNum);
+        numbers.unshift(startNum)
+
+        console.log(numbers)
+        return numbers;
+    }
+};
+console.log(rangeOfNumbers(1, 5)) // [ 1, 2, 3, 4, 5 ]
+
 
 
 
