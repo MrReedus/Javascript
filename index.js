@@ -1203,7 +1203,25 @@ let sum = 0;
 for (let key in salaries) {
     sum += salaries[key];
 }
-console.log(sum) // сумма всех значений объекта
+console.log(sum) // 490 сумма всех значений объекта
+
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+function multiplyNumeric(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'number') {
+            obj[key] *= 2;
+        }
+    }
+};
+
+multiplyNumeric(menu)
+console.log(menu) // удваиваем значения объекта если они числовые
+
 
 
 
