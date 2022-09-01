@@ -1222,6 +1222,16 @@ function multiplyNumeric(obj) {
 multiplyNumeric(menu)
 console.log(menu) // удваиваем значения объекта если они числовые
 
+// Проверка объекта на существование свойств
+
+function isEmpty(obj) {
+    for (let key in obj) {
+        // если тело цикла начнет выполняться - значит в объекте есть свойства
+        return false;
+    }
+    return true;
+}
+
 
 
 
