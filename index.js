@@ -1192,6 +1192,22 @@ Array.isArray(arr) проверяет, является ли arr массиво�
 
 
 
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130,
+    Eugine: 100
+}
+
+let sum = 0;
+for (let key in salaries) {
+    sum += salaries[key];
+}
+console.log(sum) // сумма всех значений объекта
+
+
+
+
 
 
 
