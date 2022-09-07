@@ -1243,6 +1243,68 @@ function testArray(a, b) {
 }
 
 
+// задача на возвращение дня из даты полученного из строки
+
+function testDateTime(a, b) {
+    var myDateA = new Date(a)
+    var myDateB = new Date(b)
+    if (Date.parse(a) > Date.parse(b)) {
+        myDateA.getDay()
+        switch (myDateA.getDay()) {
+            case 0:
+                return ('Воскресенье');
+                break;
+            case 1:
+                return ('Понедельник');
+                break;
+            case 2:
+                return ('Вторник');
+                break;
+            case 3:
+                return ('Среда');
+                break;
+            case 4:
+                return ('Четверг');
+                break;
+            case 4:
+                return (' Пятница');
+                break;
+            case 5:
+                return ('Суббота');
+                break;
+        }
+
+    } else {
+        myDateB.getDay()
+        switch (myDateB.getDay()) {
+            case 0:
+                return ('Воскресенье');
+                break;
+            case 1:
+                return ('Понедельник');
+                break;
+            case 2:
+                return ('Вторник');
+                break;
+            case 3:
+                return ('Среда');
+                break;
+            case 4:
+                return ('Четверг');
+                break;
+            case 4:
+                return (' Пятница');
+                break;
+            case 5:
+                return ('Суббота');
+                break;
+        }
+    }
+}
+
+console.log(testDateTime("29 October 1909 10:27", "28 March 1909 00:59"));
+
+
 
 
 
