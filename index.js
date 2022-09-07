@@ -1304,6 +1304,21 @@ function testDateTime(a, b) {
 
 console.log(testDateTime("29 October 1909 10:27", "28 March 1909 00:59"));
 
+//! более простой вариант с массивом 
+
+function testDateTime(a, b) {
+    var firstDate = new Date(a)
+    var secondDate = new Date(b)
+    let weekDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    if (+Date.parse(a) >= +Date.parse(b)) {
+        return weekDays[firstDate.getDay()]
+
+    } else {
+        return weekDays[secondDate.getDay()]
+    }
+}
+
+
 
 
 
