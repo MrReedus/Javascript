@@ -1233,6 +1233,17 @@ function isEmpty(obj) {
 }
 
 
+// преобразование строк в массив, а затем обратно массив в строку с reverse
+function testArray(a, b) {
+    let array = (a + b).split('');
+    array.unshift('Иванов');
+    array.reverse()
+    let myString = array.join("")
+    return myString;
+}
+
+
+
 
 
 
