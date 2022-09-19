@@ -61,4 +61,11 @@ const testMath = (a, b, c, d) => Math.floor(Math.max(a, b, c, d) / Math.min(a, b
 *Math.exp(x) - вычисляет экспоненту - значение числа е в степени аргумента "х"
 *Math.random() - возвращает случайное число от 0 (включительно) до 1
  */
+// возводим число а в степень b 
+function testMath(a, b) {
+    return Math.pow(a, b)
+}
 
+//refactor
+
+const testMath = (a, b) => Math.pow(a, b);
