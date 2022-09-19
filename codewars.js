@@ -27,3 +27,12 @@ function nthFibo(n) {
 
 const testMath = (a, b, c) => 0.5 * a * b * Math.sin(c * Math.PI / 180);
 
+// находим минимальное и максимальные числа, делим макс на мин и округляем в меньшую сторону
+function testMath(a, b, c, d) {
+    let maxNum = Math.max(a, b, c, d);
+    let minNum = Math.min(a, b, c, d);
+    let result = Math.floor(maxNum / minNum)
+    return result;
+}
+
+
