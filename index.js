@@ -1376,7 +1376,28 @@ const newArr = array.map(str => str += "!");
 //решение 
 
 
-export const fill = (arraySize, value) => new Array(arraySize).fill(value);
+const fill = (arraySize, value) => new Array(arraySize).fill(value);
+
+
+/*
+  * Описание задачи: Напишите функцию, которая разворачивает массив в обратном порядке.
+  * Ожидаемый результат: [1, 2, 3] => [3, 2, 1]
+  * Сложность задачи: 1 of 5
+  * @param {Array} array - Массив любых элементов
+  * @returns {Array}
+*/
+
+const reverse = (array) => {
+    const reversed = [];
+
+    for (let i = array.length - 1; i >= 0; i--) {
+        reversed.push(array[i]);
+    }
+
+    return reversed;
+};
+
+const data = [1, 2, 3]; // вернёт [3, 2, 1]
 
 
 
