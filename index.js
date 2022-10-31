@@ -1400,6 +1400,29 @@ const reverse = (array) => {
 const data = [1, 2, 3]; // вернёт [3, 2, 1]
 
 
+//! Деструктуризация массива 
+
+const [first, second] = ['My name is', 'Keks'];
+
+console.log(first); // 'My name is'
+console.log(second); // 'Keks'
+
+// обьекта 
+
+const person = {
+    name: 'Eugine',
+    age: 26,
+    weight: 183,
+}
+
+const { name, age, weight } = person
+
+console.log(name) // Eugine
+console.log(age) // 26
+console.log(weight) // 183
+
+
+
 
 
 
