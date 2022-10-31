@@ -1342,6 +1342,42 @@ function testDateTime(a, b) {
     }
 }
 
+//Дан массив с числами. Используя метод map извлеките из каждого элемента массива квадратный корень и запишите результат в новый массив.
+
+let array = [16, 64, 100];
+
+const newArray = array.map((num) => {
+    return Math.sqrt(num);
+});
+
+console.log(newArray);
+
+// добавляем  "!" к концу каждой строки массива
+
+let arr = ['16', '64', '100']
+
+const newArr = array.map((str) => {
+    return str += "!";
+});
+
+console.log(newArr)
+
+//сокращение кода, но читается сложнее
+const newArr = array.map(str => str += "!");
+
+/*Описание задачи: Напишите функцию, которая заполняет новый массив предоставленным значением.
+  * Ожидаемый результат: (3, 'a') => ['a', 'a', 'a']
+  * Сложность задачи: 1 of 5
+  * @param {number} arraySize - размер массива
+  * @param {?} value - значение для массива
+  * @returns {Array}
+*/
+
+//решение 
+
+
+export const fill = (arraySize, value) => new Array(arraySize).fill(value);
+
 
 
 
