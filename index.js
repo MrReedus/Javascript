@@ -1422,8 +1422,22 @@ console.log(age) // 26
 console.log(weight) // 183
 
 
+//! ЗАМЫКАНИЯ """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+function urlGeneraltor(domain) {
+    return function (url) {
+        return `https://${url}.${domain}`;
+    }
+}
+const comUrl = urlGeneraltor('com');
+const comRu = urlGeneraltor('ru');
 
+console.log(comUrl('google')) // https://google.com
+console.log(comUrl('vk'))// https://vk.com
+
+console.log(comRu('yandex')) //https://yandex.ru
+
+//* Ничего не понятно, но очень интерестно с:
 
 
 
