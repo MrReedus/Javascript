@@ -1441,6 +1441,55 @@ console.log(comRu('yandex')) //https://yandex.ru
 
 
 
+const assortmentData = [
+    {
+        inStock: true,
+        isHit: false
+    },
+    {
+        inStock: false,
+        isHit: false
+    },
+    {
+        inStock: true,
+        isHit: true
+    },
+    {
+        inStock: true,
+        isHit: false
+    },
+    {
+        inStock: false,
+        isHit: false
+    }
+];
+
+let goods = document.querySelectorAll('.good');
+
+const updateCards = function (products) {
+
+    for (let i = 0; i < goods.length; i++) {
+        let availabilityClass = 'good--available';
+        let good = goods[i];
+        let product = products[i];
+
+        if (!product.inStock) {
+            availabilityClass = 'good--unavailable';
+        }
+
+        good.classList.add(availabilityClass)
+
+        if (product.isHit) {
+            good.classList.add('good--hit')
+        }
+    }
+};
+
+updateCards(assortmentData) // задача из тренажёра htmlAcademy
+
+
+
+
 
 
 
