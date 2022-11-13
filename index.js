@@ -1489,6 +1489,175 @@ updateCards(assortmentData) // задача из тренажёра htmlAcademy
 
 
 
+var cardsData = [
+    {
+        inStock: true,
+        imgUrl: 'gllacy/choco.jpg',
+        text: 'Сливочно-кофейное с кусочками шоколада',
+        price: 310,
+        isHit: true,
+        specialOffer: 'Двойная порция сиропа бесплатно!'
+    },
+    {
+        inStock: false,
+        imgUrl: 'gllacy/lemon.jpg',
+        text: 'Сливочно-лимонное с карамельной присыпкой',
+        price: 125,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/cowberry.jpg',
+        text: 'Сливочное с брусничным джемом',
+        price: 170,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/cookie.jpg',
+        text: 'Сливочное с кусочками печенья',
+        price: 250,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/creme-brulee.jpg',
+        text: 'Сливочное крем-брюле',
+        price: 190,
+        isHit: false
+    }
+];
+
+
+var createElement = function (tagName, className, text) {
+    var element = document.createElement(tagName)
+    element.classList.add(className);
+    if (text) {
+        element.textContent = text;
+    };
+    return element;
+};
+
+// Небольшой рефакторинг ниже
+
+const updateCards = function (products) {
+
+    for (let i = 0; i < goods.length; i++) {
+
+        let good = goods[i];
+        let product = products[i];
+        let availabilityClass = (product.inStock) ? 'good--available' : 'good--unavailable';
+
+        good.classList.add(availabilityClass);
+
+        if (product.isHit) good.classList.add('good--hit');
+
+    }
+};
+
+updateCards(assortmentData)
+
+//* Задача по генерации карточек товара и добавления их на страницу с тренажёра htmlAcademy
+
+var cardsData = [
+    {
+        inStock: true,
+        imgUrl: 'gllacy/choco.jpg',
+        text: 'Сливочно-кофейное с кусочками шоколада',
+        price: 310,
+        isHit: true,
+        specialOffer: 'Двойная порция сиропа бесплатно!'
+    },
+    {
+        inStock: false,
+        imgUrl: 'gllacy/lemon.jpg',
+        text: 'Сливочно-лимонное с карамельной присыпкой',
+        price: 125,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/cowberry.jpg',
+        text: 'Сливочное с брусничным джемом',
+        price: 170,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/cookie.jpg',
+        text: 'Сливочное с кусочками печенья',
+        price: 250,
+        isHit: false
+    },
+    {
+        inStock: true,
+        imgUrl: 'gllacy/creme-brulee.jpg',
+        text: 'Сливочное крем-брюле',
+        price: 190,
+        isHit: false
+    }
+];
+
+
+var createElement = function (tagName, className, text) {
+    var element = document.createElement(tagName)
+    element.classList.add(className);
+    if (text) {
+        element.textContent = text;
+    };
+    return element;
+};
+
+
+var createCard = function (good) {
+
+    var goodsItem = createElement('li', 'good');
+
+    var title = createElement('h2', 'good__description', good.text);
+    goodsItem.appendChild(title);
+
+    var pic = createElement('img', 'good__image');
+    pic.src = good.imgUrl;
+    pic.alt = good.text;
+    goodsItem.appendChild(pic);
+
+    var price = createElement('p', 'good__price', good.price + '₽/кг');
+    goodsItem.appendChild(price);
+
+    var availabilityClass = 'good--available';
+
+    if (!good.inStock) {
+        availabilityClass = 'good--unavailable';
+    }
+    goodsItem.classList.add(availabilityClass);
+
+    if (good.isHit) {
+        goodsItem.classList.add('good--hit');
+        if (good.specialOffer) {
+            var goodSpecial = createElement('p', 'good__special-offer', good.specialOffer);
+            goodsItem.appendChild(goodSpecial);
+        }
+
+    }
+
+    return goodsItem;
+}
+
+var goods = document.querySelector('.goods')
+
+var renderCards = function (array) {
+
+    for (let i = 0; i < array.length; i++) {
+        var cardItem = createCard(array[i]);
+        goods.appendChild(cardItem);
+    }
+    return;
+}
+
+renderCards(cardsData);
+
+
+
 
 
 
