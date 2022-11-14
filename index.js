@@ -1658,6 +1658,31 @@ renderCards(cardsData);
 
 
 
+//* Обработчики событий 
+
+// программирование показа/закрытия модального окна 
+
+var popup = document.querySelector('.popup');
+var button = document.querySelector('.button-show');
+var closeButton = popup.querySelector('.button-hide');
+
+
+button.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup.classList.add('popup--open');
+})
+
+closeButton.addEventListener('click', function () {
+    popup.classList.remove('popup--open');
+})
+
+document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) { // (ESC)
+        popup.classList.remove('popup--open');
+    }
+})
+
+
 
 
 
