@@ -1440,6 +1440,26 @@ console.log(comRu('yandex')) //https://yandex.ru
 //* Ничего не понятно, но очень интерестно с:
 
 
+//* Задачка по замыканиям с htmlAcademy 
+
+var pictures = [
+    'gallery-tomato/tomato-red-large.jpg',
+    'gallery-tomato/tomato-yellow-large.jpg',
+    'gallery-tomato/tomato-strange-large.jpg'
+];
+
+var gallery = document.querySelectorAll('.gallery__picture-preview');
+var fullPhoto = document.querySelector('.full-picture')
+
+var addGaleryClickHandler = function (galleryItem, photo) {
+    galleryItem.addEventListener('click', () => fullPhoto.src = photo)
+};
+
+for (var i = 0; i < gallery.length; i++) {
+    addGaleryClickHandler(gallery[i], pictures[i])
+}
+
+
 
 const assortmentData = [
     {
