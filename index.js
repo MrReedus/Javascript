@@ -1702,6 +1702,36 @@ document.addEventListener('keydown', function (evt) {
     }
 })
 
+// Задача "Мессенжер" HtmlAcademy
+
+let templateMessage = document.querySelector('#message-template').content;
+let chatContent = document.querySelector('.chat-content');
+let inputMessage = document.querySelector('.chat-form-input');
+let chatItemSubmit = document.querySelector('.chat-form');
+// Обработчик на отправку формы
+chatItemSubmit.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    let message = templateMessage.cloneNode(true); // копируем шаблон для дальнейшей работы
+    let messageText = message.querySelector('p');
+    let messageCloseBtn = message.querySelector('.chat-message-button'); //*
+
+    messageText.textContent = inputMessage.value; // передаем значение из инпута в текст сообщения
+
+    messageHandler(messageCloseBtn);
+    chatContent.appendChild(message) // выводим сообщение
+    inputMessage.value = '';
+
+});
+
+// обработчик на удаление сообщения
+let messageHandler = (item) => {
+    item.addEventListener('click', () => {
+        item.closest('.chat-message').remove();
+    });
+
+}
+
 
 
 
