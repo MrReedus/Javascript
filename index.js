@@ -231,11 +231,11 @@ console.log(loc);
 
 //! Можно иметь как локальные , так и глобальные переменные с одинаковыми именами. При этом локальная переменная имеет приоритет над глобальной.
 
-const someVar = "Hat";
+const somelet = "Hat";
 
 function myFun() {
-    const someVar = "Head";
-    return someVar;
+    const somelet = "Head";
+    return somelet;
 }
 
 //* Функция myFun вернет строку, Head поскольку присутствует локальная версия переменной.
@@ -1270,8 +1270,8 @@ function testArray(a, b) {
 // задача на возвращение дня из даты полученного из строки
 
 function testDateTime(a, b) {
-    var myDateA = new Date(a)
-    var myDateB = new Date(b)
+    let myDateA = new Date(a)
+    let myDateB = new Date(b)
     if (Date.parse(a) > Date.parse(b)) {
         myDateA.getDay()
         switch (myDateA.getDay()) {
@@ -1331,8 +1331,8 @@ console.log(testDateTime("29 October 1909 10:27", "28 March 1909 00:59"));
 //! более простой вариант с массивом 
 
 function testDateTime(a, b) {
-    var firstDate = new Date(a)
-    var secondDate = new Date(b)
+    let firstDate = new Date(a)
+    let secondDate = new Date(b)
     let weekDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
     if (+Date.parse(a) >= +Date.parse(b)) {
         return weekDays[firstDate.getDay()]
@@ -1442,20 +1442,20 @@ console.log(comRu('yandex')) //https://yandex.ru
 
 //* Задачка по замыканиям с htmlAcademy 
 
-var pictures = [
+let pictures = [
     'gallery-tomato/tomato-red-large.jpg',
     'gallery-tomato/tomato-yellow-large.jpg',
     'gallery-tomato/tomato-strange-large.jpg'
 ];
 
-var gallery = document.querySelectorAll('.gallery__picture-preview');
-var fullPhoto = document.querySelector('.full-picture')
+let gallery = document.querySelectorAll('.gallery__picture-preview');
+let fullPhoto = document.querySelector('.full-picture')
 
-var addGaleryClickHandler = function (galleryItem, photo) {
+let addGaleryClickHandler = function (galleryItem, photo) {
     galleryItem.addEventListener('click', () => fullPhoto.src = photo)
 };
 
-for (var i = 0; i < gallery.length; i++) {
+for (let i = 0; i < gallery.length; i++) {
     addGaleryClickHandler(gallery[i], pictures[i])
 }
 
@@ -1509,7 +1509,7 @@ updateCards(assortmentData) // задача из тренажёра htmlAcademy
 
 
 
-var cardsData = [
+let cardsData = [
     {
         inStock: true,
         imgUrl: 'gllacy/choco.jpg',
@@ -1549,8 +1549,8 @@ var cardsData = [
 ];
 
 
-var createElement = function (tagName, className, text) {
-    var element = document.createElement(tagName)
+let createElement = function (tagName, className, text) {
+    let element = document.createElement(tagName)
     element.classList.add(className);
     if (text) {
         element.textContent = text;
@@ -1579,7 +1579,7 @@ updateCards(assortmentData)
 
 //* Задача по генерации карточек товара и добавления их на страницу с тренажёра htmlAcademy
 
-var cardsData = [
+let cardsData = [
     {
         inStock: true,
         imgUrl: 'gllacy/choco.jpg',
@@ -1619,8 +1619,8 @@ var cardsData = [
 ];
 
 
-var createElement = function (tagName, className, text) {
-    var element = document.createElement(tagName)
+let createElement = function (tagName, className, text) {
+    let element = document.createElement(tagName)
     element.classList.add(className);
     if (text) {
         element.textContent = text;
@@ -1629,22 +1629,22 @@ var createElement = function (tagName, className, text) {
 };
 
 
-var createCard = function (good) {
+let createCard = function (good) {
 
-    var goodsItem = createElement('li', 'good');
+    let goodsItem = createElement('li', 'good');
 
-    var title = createElement('h2', 'good__description', good.text);
+    let title = createElement('h2', 'good__description', good.text);
     goodsItem.appendChild(title);
 
-    var pic = createElement('img', 'good__image');
+    let pic = createElement('img', 'good__image');
     pic.src = good.imgUrl;
     pic.alt = good.text;
     goodsItem.appendChild(pic);
 
-    var price = createElement('p', 'good__price', good.price + '₽/кг');
+    let price = createElement('p', 'good__price', good.price + '₽/кг');
     goodsItem.appendChild(price);
 
-    var availabilityClass = 'good--available';
+    let availabilityClass = 'good--available';
 
     if (!good.inStock) {
         availabilityClass = 'good--unavailable';
@@ -1654,7 +1654,7 @@ var createCard = function (good) {
     if (good.isHit) {
         goodsItem.classList.add('good--hit');
         if (good.specialOffer) {
-            var goodSpecial = createElement('p', 'good__special-offer', good.specialOffer);
+            let goodSpecial = createElement('p', 'good__special-offer', good.specialOffer);
             goodsItem.appendChild(goodSpecial);
         }
 
@@ -1663,12 +1663,12 @@ var createCard = function (good) {
     return goodsItem;
 }
 
-var goods = document.querySelector('.goods')
+let goods = document.querySelector('.goods')
 
-var renderCards = function (array) {
+let renderCards = function (array) {
 
     for (let i = 0; i < array.length; i++) {
-        var cardItem = createCard(array[i]);
+        let cardItem = createCard(array[i]);
         goods.appendChild(cardItem);
     }
     return;
@@ -1682,9 +1682,9 @@ renderCards(cardsData);
 
 // программирование показа/закрытия модального окна 
 
-var popup = document.querySelector('.popup');
-var button = document.querySelector('.button-show');
-var closeButton = popup.querySelector('.button-hide');
+let popup = document.querySelector('.popup');
+let button = document.querySelector('.button-show');
+let closeButton = popup.querySelector('.button-hide');
 
 
 button.addEventListener('click', function (evt) {
