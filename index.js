@@ -1714,13 +1714,13 @@ chatItemSubmit.addEventListener('submit', (evt) => {
 
     let message = templateMessage.cloneNode(true); // копируем шаблон для дальнейшей работы
     let messageText = message.querySelector('p');
-    let messageCloseBtn = message.querySelector('.chat-message-button'); //*
+    let messageCloseBtn = message.querySelector('.chat-message-button');
 
     messageText.textContent = inputMessage.value; // передаем значение из инпута в текст сообщения
 
     messageHandler(messageCloseBtn);
-    chatContent.appendChild(message) // выводим сообщение
-    inputMessage.value = '';
+    chatContent.appendChild(message); // выводим сообщение
+    inputMessage.value = ''; // очищаем поле ввода
 
 });
 
@@ -1731,6 +1731,29 @@ let messageHandler = (item) => {
     });
 
 }
+
+
+//! PROMISE
+
+// создадим ассинхронность
+
+console.log('Request data...');
+
+setTimeout(() => {
+    console.log('Preparing data...')
+
+    const backendData = {
+        server: 'aws',
+        port: 2000,
+        status: 'working'
+    }
+    setTimeout(() => {
+        backendData.modified = true
+        console.log('Data received', backendData)
+    }, 2000)
+}, 2000)
+
+//*  видно что из-за вложенности setTimeout,код становится сложнее, вложенностей может быть больше и такой код сложно поддерживать, тут нам помогут промисы
 
 
 
