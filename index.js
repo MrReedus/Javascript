@@ -1755,6 +1755,64 @@ setTimeout(() => {
 
 //*  видно что из-за вложенности setTimeout,код становится сложнее, вложенностей может быть больше и такой код сложно поддерживать, тут нам помогут промисы
 
+console.log('Request data...');
+
+
+const p = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        console.log('Preparing data...')
+
+        const backendData = {
+            server: 'aws',
+            port: 2000,
+            status: 'working'
+        }
+
+        resolve(backendData) // пиередаем переменную сюда чтобы получить к ней доступ ниже
+    }, 2000)
+})
+
+p.then(data => { // data это та же backendData
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            data.modified = true
+            resolve(data)
+
+        }, 2000)
+    })
+})
+    .then(clientData => {
+        clientData.fromPromise = true
+        return clientData;
+    })
+    .then(data => {
+        console.log('modified', data)
+    })
+    .catch(err => console.error('Error:', err)) // ловим ошибку промиса в случае если будет reject
+    .finally(() => console.log('finally')) // выводится всегда в не зависимости от успеха промиса
+
+
+
+// пример функции sleep
+
+const sleep = (ms) => {
+    return new Promise(resolve => {
+        setTimeout(() => resolve(), ms)
+    })
+}
+
+sleep(2000).then(() => console.log('After 2 sec'))
+sleep(3000).then(() => console.log('After 3 sec'))
+
+//*методы ALL и RACE 
+
+Promise.all([sleep(2000), sleep(5000)]).then(() => {
+    console.log('All Promises')
+}); // выполняет код куогда все промисы выполнены
+Promise.race([sleep(2000), sleep(5000)]).then(() => {
+    console.log('race Promises')
+}) // выполняет код когда первый пролмис выполнен
+
 
 
 
