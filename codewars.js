@@ -75,3 +75,24 @@ const testMath = (a, b) => Math.pow(a, b);
 var ArrowFunc = function (arr) {
     return arr.map((item) => String.fromCharCode.(item)).join('');
 }
+
+// объединение двух массивов и сортировка их по возрастанию, без повторений элементов
+
+function mergeArrays(arr1, arr2) {
+
+    function compareNumeric(a, b) {
+        if (a > b) return 1;
+        if (a == b) return 0;
+        if (a < b) return -1;
+    }
+    if (arr1 && arr2) {
+        const concatArr = arr1.concat(arr2).sort(compareNumeric);
+
+        const uniqSet = new Set(concatArr);
+        const makeUniq = (arr) => [...new Set(arr)];
+        const result = makeUniq(concatArr);
+
+        return result;
+    } else {
+        return [];
+    };
