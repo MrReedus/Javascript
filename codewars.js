@@ -69,3 +69,9 @@ function testMath(a, b) {
 //refactor
 
 const testMath = (a, b) => Math.pow(a, b);
+
+//Преобразование числа в в соответствующий символ ascii String.fromCharCode. = специальная функцмя преобразования числа (внутри codewars)
+
+var ArrowFunc = function (arr) {
+    return arr.map((item) => String.fromCharCode.(item)).join('');
+}
