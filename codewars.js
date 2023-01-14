@@ -103,3 +103,9 @@ function mergeArrays(arr1, arr2) {
 function mergeArrays(a, b) {
     return [...new Set(a.concat(b))].sort((a, b) => a - b)
 }
+
+// Добавить свойство к каждому объекту в массиве
+
+questions.forEach((item) => {
+    item.usersAnswer = null;
+})
