@@ -123,3 +123,14 @@ function combine() {
 
     return obj;
 }
+
+// create nickname from string
+
+function nicknameGenerator(name) {
+    const nickName = ('aeiou'.includes(name[2], 0)) ? name.slice(0, 4) : name.slice(0, 3);
+    if (name.length <= 3) {
+        return 'Error: Name too short'
+    } else {
+        return nickName;
+    }
+}
