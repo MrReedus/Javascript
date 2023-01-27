@@ -166,3 +166,8 @@ function isPowerOfTwo(n) {
 // и ещё один вариант решение через Math.log2() в верхних двух codewars выдаёт ошибку.
 
 const isPowerOfTwo = (n) => Number.isInteger(Math.log2(n))
+
+// Vowel one Преобразуем все согласные в 0 а глассные в 1
+function vowelOne(s) {
+    return s.replace(/./g, v => /[aeiou]/i.test(v) ? '1' : '0')
+}
