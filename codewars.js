@@ -134,3 +134,12 @@ function nicknameGenerator(name) {
         return nickName;
     }
 }
+
+
+// String Reordering
+
+function sentence(list) {
+    let sortObj = list.sort((a, b) => Object.keys(a) - Object.keys(b))
+    let result = sortObj.map(obj => Object.values(obj)).join(" ")
+    return result;
+}
