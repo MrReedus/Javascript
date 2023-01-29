@@ -143,3 +143,14 @@ function sentence(list) {
     let result = sortObj.map(obj => Object.values(obj)).join(" ")
     return result;
 }
+
+//Power of two Проверяем является ли передаваемое число результатом 2 в степени
+
+function isPowerOfTwo(n) {
+    const getBaseLog = (x, y) => Math.log(n) / Math.log(2)
+    if (getBaseLog() % 1 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
