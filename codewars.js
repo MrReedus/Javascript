@@ -154,3 +154,15 @@ function isPowerOfTwo(n) {
         return false
     }
 }
+
+// fix
+
+function isPowerOfTwo(n) {
+    const getBaseLog = (x, y) => Math.log(n) / Math.log(2);
+    const result = (Number.isInteger(getBaseLog())) ? true : false
+    return result;
+}
+
+// и ещё один вариант решение через Math.log2() в верхних двух codewars выдаёт ошибку.
+
+const isPowerOfTwo = (n) => Number.isInteger(Math.log2(n))
