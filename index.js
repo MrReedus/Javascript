@@ -1840,7 +1840,31 @@ function camelize(str) {
         )
         .join(''); // соединяет ['my', 'Long', 'Word'] в 'myLongWord'
 }
+//Смена падежа в зависимости от принимаемого числа
 
+const numberInCase = (int) => {
+    let lastDigit = int % 10;
+    let resultWord;
+
+    if (int >= 11 && int <= 19) {
+        resultWord = "компьютеров";
+    } else {
+        switch (lastDigit) {
+            case 1:
+                resultWord = "компьютер";
+                break;
+            case 2:
+            case 3:
+            case 4:
+                resultWord = "компьютера";
+                break;
+            default:
+                resultWord = "компьютеров";
+        }
+    }
+
+    return `${int} ${resultWord}`;
+}
 
 
 
