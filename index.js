@@ -1918,6 +1918,29 @@ function commonElements(arr1, arr2) {
 
 console.log(commonElements([7, 17, 1, 9, 1, 17, 56, 56, 23], [56, 17, 17, 1, 23, 34, 23, 1, 8, 1]));
 
+// выводим в консоль таблицу умножения
+
+function multiplicationTable(n) {
+    let maxLength = (n * n).toString().length;
+
+    let firstRow = ' '.repeat(maxLength) + ' ';
+    for (let j = 1; j <= n; j++) {
+        firstRow += ' '.repeat(maxLength - 1) + j + ' ';
+    }
+    console.log(firstRow);
+
+    for (let i = 1; i <= n; i++) {
+        let row = i.toString().padStart(maxLength, ' ') + ' ';
+        for (let j = 1; j <= n; j++) {
+            let num = i * j;
+            let spaces = maxLength - num.toString().length;
+            row += ' '.repeat(spaces) + num + ' ';
+        }
+        console.log(row);
+    }
+}
+multiplicationTable()
+
 
 
 
