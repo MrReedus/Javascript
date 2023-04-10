@@ -176,3 +176,8 @@ function vowelOne(s) {
 // Сортировка массива строк в порядке возрастания по длинне строки
 
 const sortByLength = (arr) => arr.sort((a,b) => a.length - b.length)
+
+// задача на соответсвие первых и последних символов входных аргументов
+function feast (beast, dish)  {
+    return (beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) ? true : false
+    }
