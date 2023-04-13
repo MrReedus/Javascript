@@ -171,3 +171,8 @@ const isPowerOfTwo = (n) => Number.isInteger(Math.log2(n))
 function vowelOne(s) {
     return s.replace(/./g, v => /[aeiou]/i.test(v) ? '1' : '0')
 }
+
+
+// Сортировка массива строк в порядке возрастания по длинне строки
+
+const sortByLength = (arr) => arr.sort((a,b) => a.length - b.length)
