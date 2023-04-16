@@ -1943,6 +1943,17 @@ multiplicationTable()
 
 
 
+// Задача на проверку телефонного номера 
+function isItANum(str) {
+    const digits = str.replace(/\D/g, ""); // remove non-digits
+    if (digits.length === 11 && digits[0] === "0") {
+      return digits;
+    } else {
+      return "Not a phone number";
+    }
+  }
+
+
 
 
 
