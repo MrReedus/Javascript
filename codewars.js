@@ -181,3 +181,17 @@ const sortByLength = (arr) => arr.sort((a,b) => a.length - b.length)
 function feast (beast, dish)  {
     return (beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]) ? true : false
     }
+
+// Holiday III - Fire on the boat
+//Задача на изменение определенного элементиа массива
+    function fireFight(s){
+  
+        return s
+          .split(' ')
+          .map((str)=>{
+            return str.replace('Fire', '~~')
+           })
+          .join(' ')
+        }
+
+        // console.log(fireFight('Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast'))  -> 'fire' меняется на '~~'
