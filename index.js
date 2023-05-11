@@ -1954,6 +1954,15 @@ function isItANum(str) {
   }
 
 
+  // Сумма элементов массива через reduce 
+
+  const sum = (arr) => {
+    return arr.reduce((a,i) => {
+      return a + i 
+    },0)
+  }
+  console.log(sum([1,2,3]))
+
 
 
 
