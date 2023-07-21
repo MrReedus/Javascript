@@ -193,5 +193,19 @@ function feast (beast, dish)  {
            })
           .join(' ')
         }
+    
 
         // console.log(fireFight('Boat Rudder Mast Boat Hull Water Fire Boat Deck Hull Fire Propeller Deck Fire Deck Boat Mast'))  -> 'fire' меняется на '~~'
+
+    
+
+
+       
+    
+         //Задача на получение индекса заглавных букв строки
+        const capitals = word => word
+.split('')
+.map( (letter, index) => (letter === letter.toUpperCase()) ? index : '')
+.filter(i => i !== '')
+  
+
