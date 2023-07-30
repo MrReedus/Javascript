@@ -212,3 +212,13 @@ function feast (beast, dish)  {
 // возвращение отсортированнного массива чисел, а если null то пустой массив
 const solution = nums => (nums === null) ? [] : nums.sort((a,b) => a - b)
 
+//Задача на замену символов строки на # кроме последних четырёх
+
+function maskify(string) {
+    if (string.length <= 4) {
+      return string;
+    } else {
+      return "#".repeat(string.length - 4) + string.slice(-4);
+    }
+  }
+  
