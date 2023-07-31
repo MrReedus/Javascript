@@ -209,3 +209,6 @@ function feast (beast, dish)  {
 .filter(i => i !== '')
   
 
+// возвращение отсортированнного массива чисел, а если null то пустой массив
+const solution = nums => (nums === null) ? [] : nums.sort((a,b) => a - b)
+
